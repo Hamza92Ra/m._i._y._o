@@ -55,7 +55,11 @@ export const translations: Record<Lang, Record<string, string>> = {
                 placeholder_name: "Votre nom", placeholder_address: "Votre adresse de livraison",
                 footer_desc: "Fast food & comfort food à Rabat. Burgers juteux, Mac & Cheese fondants et sandwiches gourmands préparés avec passion et des produits frais.",
                 footer_menu: "Menu", footer_links: "Liens", footer_contact: "Contact",
-                footer_copy: "© 2026 MIYO. Tous droits réservés.", footer_made: "Fait avec ❤ à Rabat"
+                footer_copy: "© 2026 MIYO. Tous droits réservés.", footer_made: "Fait avec ❤ à Rabat",
+                nav_gallery: "La Carte",
+                gallery_tag: "Notre Menu",
+                gallery_title: "La carte en images",
+                gallery_subtitle: "Mac & Cheese, burgers, sandwichs, salades, fritures et desserts — retrouvez toutes nos spécialités."
             },
             en: {
                 nav_home: "Home", nav_about: "About", nav_menu: "Menu", nav_reviews: "Reviews", nav_order: "Order",
@@ -111,7 +115,11 @@ export const translations: Record<Lang, Record<string, string>> = {
                 placeholder_name: "Your name", placeholder_address: "Your delivery address",
                 footer_desc: "Fast food & comfort food in Rabat. Juicy burgers, melting Mac & Cheese and gourmet sandwiches prepared with passion and fresh products.",
                 footer_menu: "Menu", footer_links: "Links", footer_contact: "Contact",
-                footer_copy: "© 2026 MIYO. All rights reserved.", footer_made: "Made with ❤ in Rabat"
+                footer_copy: "© 2026 MIYO. All rights reserved.", footer_made: "Made with ❤ in Rabat",
+                nav_gallery: "Full Menu",
+                gallery_tag: "Our Menu",
+                gallery_title: "The menu in pictures",
+                gallery_subtitle: "Mac & Cheese, burgers, sandwiches, salads, fried sides and desserts — check out all our specialties."
             },
             ar: {
                 nav_home: "الرئيسية", nav_about: "من نحن", nav_menu: "القائمة", nav_reviews: "التقييمات", nav_order: "اطلب",
@@ -167,6 +175,10 @@ export const translations: Record<Lang, Record<string, string>> = {
                 placeholder_name: "اسمك", placeholder_address: "عنوان التوصيل",
                 footer_desc: "وجبات سريعة ومريحة في الرباط. برغر عصير، ماك آند تشيز ذائب وساندويتشات فاخرة محضرة بشغف ومنتجات طازجة.",
                 footer_menu: "القائمة", footer_links: "روابط", footer_contact: "اتصل بنا",
-                footer_copy: "© 2026 MIYO. جميع الحقوق محفوظة.", footer_made: "صنع بـ ❤ في الرباط"
+                footer_copy: "© 2026 MIYO. جميع الحقوق محفوظة.", footer_made: "صنع بـ ❤ في الرباط",
+                nav_gallery: "المنيو",
+                gallery_tag: "قائمتنا",
+                gallery_title: "المنيو بالصور",
+                gallery_subtitle: "ماك آند تشيز، برغر، ساندويتشات، سلطات، مقليات وحلويات — اكتشف جميع تخصصاتنا."
             }
         };;

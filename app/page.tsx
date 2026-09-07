@@ -7,6 +7,7 @@ import Loader from '@/components/Loader';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import MenuGallery from '@/components/MenuGallery';
 import MenuSection from '@/components/MenuSection';
 import Reviews from '@/components/Reviews';
 import OrderSection from '@/components/OrderSection';
@@ -121,6 +122,7 @@ export default function Home() {
       />
       <Hero t={t} />
       <About t={t} />
+      <MenuGallery t={t} />
       <MenuSection t={t} addedId={addedId} addToCart={addToCart} />
       <Reviews t={t} />
       <OrderSection t={t} />

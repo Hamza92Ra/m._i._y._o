@@ -14,38 +14,14 @@ export default function MenuSection({ t, addedId, addToCart }: Props) {
     const itemName = item.nameKey ? t[item.nameKey] : (item.name ?? '');
     const added = addedId === item.id;
     return (
-      <div className={item.special ? 'menu-card special-card' : 'menu-card'} key={item.id} data-id={item.id}>
-        <div className="menu-card-image">
-          {item.special ? (
-            <i className="fas fa-box-open" style={{ color: 'white' }}></i>
-          ) : (
-            item.emoji
-          )}
-        </div>
-        {item.badge && <div className="menu-card-badge">{t.badge_popular}</div>}
-        <div className="menu-card-body">
-          <div className="menu-card-title">
-            <span>{itemName}</span>
-          </div>
-          <p className="menu-card-desc">{t[item.descKey]}</p>
-          {item.special && (
-            <div className="special-details">
-              <span className="special-tag"><i className="fas fa-burger"></i> <span>{t.lunch_burger}</span></span>
-              <span className="special-tag"><i className="fas fa-bread-slice"></i> <span>{t.lunch_sandwich}</span></span>
-              <span className="special-tag"><i className="fas fa-cookie-bite"></i> <span>{t.lunch_fries}</span></span>
-              <span className="special-tag"><i className="fas fa-glass-water"></i> <span>{t.lunch_drink}</span></span>
-            </div>
-          )}
-          <div className="menu-card-footer" style={item.special ? { marginTop: '1.5rem' } : undefined}>
-            <div className="menu-price">{item.price} <span>DHS</span></div>
-            <button
-              className={added ? 'add-btn added' : 'add-btn'}
-              onClick={() => addToCart(item.id, itemName, item.price)}
-            >
-              <i className={added ? 'fas fa-check' : 'fas fa-plus'}></i>
-            </button>
-          </div>
-        </div>
+      <div className="menu-card-image">
+        {item.special ? (
+          <i className="fas fa-box-open" style={{ color: 'white' }}></i>
+        ) : item.image ? (
+          <img src={item.image} alt={itemName} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
+        ) : (
+          item.emoji
+        )}
       </div>
     );
   };

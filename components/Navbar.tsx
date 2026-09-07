@@ -15,6 +15,7 @@ interface Props {
 const LINKS = [
   { href: '#home', key: 'nav_home', id: 'home' },
   { href: '#about', key: 'nav_about', id: 'about' },
+  { href: '#carte', key: 'nav_gallery', id: 'carte' },
   { href: '#menu', key: 'nav_menu', id: 'menu' },
   { href: '#reviews', key: 'nav_reviews', id: 'reviews' },
   { href: '#order', key: 'nav_order', id: 'order' },

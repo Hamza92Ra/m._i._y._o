@@ -24,3 +24,14 @@ export interface Category {
   titleKey: string;
   items: MenuItem[];
 }
+export interface MenuItem {
+  id: string;
+  name?: string;
+  nameKey?: string;
+  descKey: string;
+  price: number;
+  image?: string;      // <-- AJOUTE ÇA
+  emoji?: string;      // tu peux garder ou supprimer
+  badge?: boolean;
+  special?: boolean;
+}

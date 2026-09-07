@@ -31,3 +31,4 @@ export default function About({ t }: { t: Record<string, string> }) {
     </section>
   );
 }
+

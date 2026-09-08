@@ -18,7 +18,15 @@ export default function Hero({ t }: { t: Record<string, string> }) {
 
   return (
     <section className="hero" id="home">
-      <div className="hero-bg"></div>
+      <div className="hero-image-bg">
+        <img
+          src="/images/about-burger.png"
+          alt="MIYO Burger"
+          className="hero-bg-img"
+        />
+        <div className="hero-image-overlay"></div>
+        <div className="hero-image-vignette"></div>
+      </div>
       <div className="hero-particles" id="particles"></div>
       <div className="hero-content">
         <div className="hero-badge">

@@ -580,7 +580,7 @@ section {
     background: linear-gradient(to top, var(--card), transparent);
 }
 
-.menu-card-badge {
+.menu-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -593,7 +593,7 @@ section {
     z-index: 2;
 }
 
-.menu-card-body {
+.menu-card-content {
     padding: 1.5rem;
     flex: 1;
     display: flex;
@@ -603,6 +603,7 @@ section {
 .menu-card-title {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: var(--text);
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -624,39 +625,34 @@ section {
     margin-top: auto;
 }
 
-.menu-price {
+.menu-card-price {
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--secondary);
 }
 
-.menu-price span {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-weight: 400;
-}
-
-.add-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--primary);
-    color: white;
+.add-to-cart-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: var(--transition);
-    font-size: 1.1rem;
+    background: var(--primary);
+    color: white;
+    font-family: inherit;
 }
 
-.add-btn:hover {
+.add-to-cart-btn:hover {
     background: var(--primary-hover);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.add-btn.added {
+.add-to-cart-btn.added {
     background: var(--success);
 }
 
@@ -680,7 +676,7 @@ section {
     font-size: 4rem;
 }
 
-.special-card .menu-card-body {
+.special-card .menu-card-content {
     padding: 0;
 }
 
@@ -1415,87 +1411,4 @@ footer {
     .lightbox-next {
         right: 0.5rem;
     }
-}
-
-.menu-card {
-    background: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.menu-card-image {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    /* NO height: 180px */
-    /* NO background: #f5f5f5 */
-}
-
-.menu-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #ff4d4d;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 20px;
-    text-transform: uppercase;
-}
-
-.menu-card-content {
-    padding: 1.2rem;
-}
-
-.menu-card-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    color: #1a1a1a;
-}
-
-.menu-card-desc {
-    font-size: 0.85rem;
-    color: #666;
-    line-height: 1.4;
-    margin-bottom: 0.8rem;
-}
-
-.menu-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu-card-price {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ff4d4d;
-}
-
-.add-to-cart-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.add-to-cart-btn.added {
-    background: #22c55e;
 }

@@ -1,3 +1,4 @@
+// lib/types.ts
 export type Lang = 'fr' | 'en' | 'ar';
 
 export interface CartItem {
@@ -13,6 +14,7 @@ export interface MenuItem {
   nameKey?: string;
   descKey: string;
   price: number;
+  image?: string;
   emoji?: string;
   badge?: boolean;
   special?: boolean;
@@ -23,15 +25,4 @@ export interface Category {
   icon: string;
   titleKey: string;
   items: MenuItem[];
-}
-export interface MenuItem {
-  id: string;
-  name?: string;
-  nameKey?: string;
-  descKey: string;
-  price: number;
-  image?: string;      // <-- AJOUTE ÇA
-  emoji?: string;      // tu peux garder ou supprimer
-  badge?: boolean;
-  special?: boolean;
 }

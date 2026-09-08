@@ -97,6 +97,7 @@ export default function Home() {
     if (cart.length === 0) return;
     const customer = name.trim() || 'Client';
     const addr = address.trim() || 'À préciser';
+    const phone = '212675399243';
     let orderTotal = 0;
     const itemsText = cart
       .map((item) => {
@@ -105,7 +106,7 @@ export default function Home() {
       })
       .join('\n');
     const message = `🍔 *Commande MIYO* 🍔\n\n👤 *Nom:* ${customer}\n📍 *Adresse:* ${addr}\n\n📋 *Articles:*\n${itemsText}\n\n💰 *Total:* ${orderTotal} DHS\n\nMerci !`;
-    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/?text=${phone}`, '_blank');
   };
 
   return (

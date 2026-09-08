@@ -24,12 +24,18 @@ export default function Reviews({ t }: { t: Record<string, string> }) {
                 </div>
               </div>
               <div className="review-stars">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <i
-                    key={s}
-                    className={s <= Math.floor(r.stars) ? 'fas fa-star' : 'fas fa-star-half-alt'}
-                  ></i>
-                ))}
+                {[1, 2, 3, 4, 5].map((s) => {
+                  const full = s <= Math.floor(r.stars);
+                  const half = !full && s === Math.ceil(r.stars) && r.stars % 1 !== 0;
+                  return (
+                    <i
+                      key={s}
+                      className={
+                        full ? 'fas fa-star' : half ? 'fas fa-star-half-alt' : 'far fa-star'
+                      }
+                    ></i>
+                  );
+                })}
               </div>
             </div>
             <p className="review-text">{t[r.textKey]}</p>

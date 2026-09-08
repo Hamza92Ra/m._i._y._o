@@ -6,22 +6,45 @@ import type { MenuItem } from '@/lib/types';
 interface Props {
   t: Record<string, string>;
   addedId: string | null;
-  addToCart: (id: string, name: string, price: number) => void;
+  addToCart: (id: string, itemName: string, price: number) => void;
 }
 
 export default function MenuSection({ t, addedId, addToCart }: Props) {
   const renderCard = (item: MenuItem) => {
     const itemName = item.nameKey ? t[item.nameKey] : (item.name ?? '');
+    const itemDesc = item.descKey ? t[item.descKey] : '';
     const added = addedId === item.id;
+
     return (
-      <div className="menu-card-image">
-        {item.special ? (
-          <i className="fas fa-box-open" style={{ color: 'white' }}></i>
-        ) : item.image ? (
-          <img src={item.image} alt={itemName} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
-        ) : (
-          item.emoji
-        )}
+      <div className="menu-card" key={item.id}>
+        <div className="menu-card-image">
+          {item.special ? (
+            <i className="fas fa-box-open" style={{ color: 'white', fontSize: '3rem' }}></i>
+          ) : item.image ? (
+            <img
+              src={item.image}
+              alt={itemName}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+            />
+          ) : (
+            <span style={{ fontSize: '3rem' }}>{item.emoji}</span>
+          )}
+          {item.badge && <span className="menu-badge">{t.badge_popular}</span>}
+        </div>
+        <div className="menu-card-content">
+          <h4 className="menu-card-title">{itemName}</h4>
+          {itemDesc && <p className="menu-card-desc">{itemDesc}</p>}
+          <div className="menu-card-footer">
+            <span className="menu-card-price">{item.price} DHS</span>
+            <button
+              className={`btn btn-primary add-to-cart-btn ${added ? 'added' : ''}`}
+              onClick={() => addToCart(item.id, itemName, item.price)}
+            >
+              <i className={added ? 'fas fa-check' : 'fas fa-plus'}></i>
+              <span>{added ? 'Ajouté' : 'Ajouter'}</span>
+            </button>
+          </div>
+        </div>
       </div>
     );
   };

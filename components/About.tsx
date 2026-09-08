@@ -1,10 +1,25 @@
+'use client';
+
 export default function About({ t }: { t: Record<string, string> }) {
   return (
     <section className="about" id="about">
       <div className="about-grid">
         <div className="about-visual animate">
-          <div className="about-visual-main">
-            <i className="fas fa-fire" style={{ color: 'white', zIndex: 2, position: 'relative' }}></i>
+          <div className="about-visual-frame">
+            <div className="about-visual-glow"></div>
+            <div className="about-visual-inner">
+              <img
+                src="/images/about-burger.png"
+                alt="MIYO Burger"
+                className="about-burger-img"
+              />
+            </div>
+            <div className="about-logo-badge">
+              <img src="/images/miyo-logo.png" alt="MIYO" />
+            </div>
+            <div className="about-sparkle about-sparkle-1"><i className="fas fa-star"></i></div>
+            <div className="about-sparkle about-sparkle-2"><i className="fas fa-star"></i></div>
+            <div className="about-sparkle about-sparkle-3"><i className="fas fa-fire"></i></div>
           </div>
         </div>
         <div className="about-content animate">
@@ -31,4 +46,3 @@ export default function About({ t }: { t: Record<string, string> }) {
     </section>
   );
 }
-

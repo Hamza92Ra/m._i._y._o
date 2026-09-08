@@ -19,16 +19,17 @@ export default function MenuSection({ t, addedId, addToCart }: Props) {
       <div className="menu-card" key={item.id}>
         <div className="menu-card-image">
           {item.special ? (
-            <i className="fas fa-box-open" style={{ color: 'white', fontSize: '3rem' }}></i>
+            <i className="fas fa-box-open" style={{ color: 'white', fontSize: '2.5rem' }}></i>
           ) : item.image ? (
             <img
               src={item.image}
               alt={itemName}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+              style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '12px 12px 0 0', display: 'block' }}
             />
-          ) : (
-            <span style={{ fontSize: '3rem' }}>{item.emoji}</span>
-          )}
+          ) : item.emoji ? (
+            <span style={{ fontSize: '2.5rem' }}>{item.emoji}</span>
+          ) : null}
           {item.badge && <span className="menu-badge">{t.badge_popular}</span>}
         </div>
         <div className="menu-card-content">

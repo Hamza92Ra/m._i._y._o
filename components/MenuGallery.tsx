@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react';
 
 const IMAGES = [
-    { src: '/menu/menu-1.png', alt: 'Mac & Cheese et Desserts' },
-    { src: '/menu/menu-2.png', alt: 'Fried & Cheese' },
-    { src: '/menu/menu-3.png', alt: 'Burgers' },
-    { src: '/menu/menu-4.png', alt: 'Sandwichs' },
-    { src: '/menu/menu-5.png', alt: 'Lunch Box' },
-    { src: '/menu/menu-6.png', alt: 'Salades' },
+    { src: '/images/burger-cheese.png', alt: 'Mac & Cheese et Desserts' },
+    { src: '/images/burger-chicken.png', alt: 'Fried & Cheese' },
+    { src: '/images/burger-double-cheese.png', alt: 'Burgers' },
+    { src: '/images/burger-double-chicken.png', alt: 'Sandwichs' },
+    { src: '/images/cheese-fries.png', alt: 'Lunch Box' },
+    { src: '/images/chicken-crunch.png', alt: 'Salades' },
 ];
 
 export default function MenuGallery({ t }: { t: Record<string, string> }) {
